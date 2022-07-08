@@ -48,10 +48,10 @@ class RoomsViewModelTests: XCTestCase {
         
         roomViewModel.fetchRooms(baseUrl: "", path: "rooms_success_response")
 
-        room = roomViewModel.getRoomFor(index: 0)
+        room = roomViewModel.getRoomFor(index: 7)
        
         XCTAssertNotNil(room)
         
-        XCTAssertEqual(room!.occupiedMessage, "Not Occupied")
+        XCTAssertEqual(room!.occupiedMessage, "Occupied")
     }
 }
