@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  VMDirectoryAPP
+
+  Created by Venkatesh on 08/07/22.
+  
+*/
+
+// Title
+"people" = "People";
+"room" = "Room";
+
+
+// Accessibility
+
+"idOfRoom" = "the id of the room";
+"roomStatus" = "Room occupancy status";
+"maxOccuapancy" = "maximum occuapancy status of the room";
+"createdOn" =  "created on";
