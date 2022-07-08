@@ -41,8 +41,8 @@
 		84961A5D28781F5D00289CA4 /* Networkble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84961A5C28781F5D00289CA4 /* Networkble.swift */; };
 		84961A5F28781F9600289CA4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84961A5E28781F9600289CA4 /* NetworkManager.swift */; };
 		84961A632878214200289CA4 /* ImageDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84961A622878214200289CA4 /* ImageDownloadManager.swift */; };
-		84DE1668287861680054972D /* people_success_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 84DE1667287861680054972D /* people_success_response.json */; };
 		84DE166A287861C20054972D /* PeopleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE1669287861C20054972D /* PeopleViewModelTests.swift */; };
+		84DE166C287872BF0054972D /* people_success_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 84DE166B287872BF0054972D /* people_success_response.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,8 +101,8 @@
 		84961A5C28781F5D00289CA4 /* Networkble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkble.swift; sourceTree = "<group>"; };
 		84961A5E28781F9600289CA4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		84961A622878214200289CA4 /* ImageDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadManager.swift; sourceTree = "<group>"; };
-		84DE1667287861680054972D /* people_success_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = people_success_response.json; sourceTree = "<group>"; };
 		84DE1669287861C20054972D /* PeopleViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModelTests.swift; sourceTree = "<group>"; };
+		84DE166B287872BF0054972D /* people_success_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = people_success_response.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				043ECA9B27B6D05700C6C424 /* rooms_success_response.json */,
-				84DE1667287861680054972D /* people_success_response.json */,
+				84DE166B287872BF0054972D /* people_success_response.json */,
 				043ECA9C27B6D05700C6C424 /* failure_response.json */,
 			);
 			path = "Json Responses";
@@ -377,7 +377,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84DE1668287861680054972D /* people_success_response.json in Resources */,
 				043ECA4427B6A3B600C6C424 /* LaunchScreen.storyboard in Resources */,
 				04E965B72878597B005A3719 /* Localizable.strings in Resources */,
 				043ECA4127B6A3B600C6C424 /* Assets.xcassets in Resources */,
@@ -391,6 +390,7 @@
 			files = (
 				043ECAA227B6D05700C6C424 /* failure_response.json in Resources */,
 				043ECAA127B6D05700C6C424 /* rooms_success_response.json in Resources */,
+				84DE166C287872BF0054972D /* people_success_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

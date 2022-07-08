@@ -10,10 +10,9 @@ import XCTest
 class PeopleViewModelTests: XCTestCase {
     
     var peopleViewModel: PeoplesViewModel!
-    var coordinator: PeoplesCoordinatoryType?
+   
     override func setUpWithError() throws {
-        
-        let peoplesViewController = PeoplesViewController(peopleViewModel: peopleViewModel, coordinator: coordinator)
+  
         let mockNetworkMaanger = MockNetworkManager()
         
         peopleViewModel = PeoplesViewModel(networkManager: mockNetworkMaanger)
@@ -28,7 +27,7 @@ class PeopleViewModelTests: XCTestCase {
             
         peopleViewModel.fetchPeoples(baseUrl: "", path: "people_success_response")
          
-        XCTAssertEqual(peopleViewModel.peoplesCount , 65)
+        XCTAssertEqual(peopleViewModel.peoplesCount , 69)
     }
     
     func testFetchStaff_failure() {
@@ -53,7 +52,7 @@ class PeopleViewModelTests: XCTestCase {
        
         XCTAssertNotNil(staff)
         
-        XCTAssertEqual(staff!.firstName, "Maggie")
+        XCTAssertEqual(staff!.lastName, "Brekke")
     }
 
 }
