@@ -14,15 +14,11 @@ protocol PeoplesCoordinatoryType: AnyObject {
 
 class PeoplesCoordinator: CoordinatorType, PeoplesCoordinatoryType {
     var navController: UINavigationController
-    
     init(navBarController: UINavigationController) {
         self.navController = navBarController
     }
-    
     func start() {
-            
          let peopleViewModel = PeoplesViewModel()
-        
          let peopleVC = PeoplesViewController(peopleViewModel:peopleViewModel, coordinator: self)
             navController.pushViewController(peopleVC, animated: false)
             
@@ -33,11 +29,10 @@ class PeoplesCoordinator: CoordinatorType, PeoplesCoordinatoryType {
     
     func navigatToPeopleDetails(people: People) {
         
-        let sb = UIStoryboard(name: "Main", bundle:nil)
-        if  let peopleDetailsVC = sb.instantiateViewController(withIdentifier:"PeoplesDetailsViewController") as? PeopleDetailsViewController {
+        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+        if  let peopleDetailsVC = storyBoard.instantiateViewController(withIdentifier:"PeoplesDetailsViewController") as? PeopleDetailsViewController {
             
             peopleDetailsVC.viewModel  =     PeopleDetailsViewModel(people: people)
-            
             navController.pushViewController(peopleDetailsVC, animated: false)
         }
     }

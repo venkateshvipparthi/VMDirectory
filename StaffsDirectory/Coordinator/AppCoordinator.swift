@@ -12,7 +12,6 @@ protocol Coordinator {
     var tabBarController: UITabBarController { get set }
     func start()
 }
-
 class AppCoordinator: Coordinator {
     var tabBarController: UITabBarController
     private var peoplesCoordinator:PeoplesCoordinator?
@@ -24,28 +23,21 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-       
-        let peopleTabFlow = createPeoplesFlow()
-        let roomsTabFlow = createRoomsTab()
-
-        tabBarController.viewControllers = [peopleTabFlow, roomsTabFlow]
+        let peopleViewNav = createPeoplesFlow()
+        let roomsViewNav = createRoomsTab()
+        tabBarController.viewControllers = [peopleViewNav, roomsViewNav]
     }
     
     private func createPeoplesFlow()-> UINavigationController {
         let peoplesNavCtrl = UINavigationController()
-    
         peoplesCoordinator = PeoplesCoordinator(navBarController: peoplesNavCtrl)
         peoplesCoordinator?.start()
-        
         return peoplesNavCtrl
     }
-    
     private func createRoomsTab()-> UINavigationController {
         let roomsNavCtrl = UINavigationController()
-        
         roomssCoordinator = RoomsCoordinator(navBarController: roomsNavCtrl)
         roomssCoordinator?.start()
-        
         return roomsNavCtrl
     }
 }
