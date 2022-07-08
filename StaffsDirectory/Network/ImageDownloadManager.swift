@@ -10,7 +10,6 @@ import Foundation
 protocol ImageDownLoaderType {
     func getImage(url:String, completion:@escaping (Data)->Void)
 }
-
 class ImageDownloader:ImageDownLoaderType {
 
     static let shared = ImageDownloader()
@@ -29,7 +28,6 @@ class ImageDownloader:ImageDownLoaderType {
             }
         }
     }
-
     private func dowloadImage(url:String, completion:@escaping (Data)->Void) {
 
         guard let _url = URL(string: url) else {

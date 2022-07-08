@@ -10,3 +10,4 @@ import Foundation
 protocol Networkble {
     func get<T:Decodable>(_ baseUrl:String, path:String, type:T.Type, completionHandler:@escaping(Result<[T],   APIError>)->Void)
 }
+

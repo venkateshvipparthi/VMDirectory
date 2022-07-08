@@ -17,7 +17,7 @@ class ImageCache:ImageCacheType {
     var cache = NSCache<NSString, NSData>()
 
     private init(){
-       // cache.countLimit = 100
+       
     }
     
     func getImage(url: String) -> Data? {
