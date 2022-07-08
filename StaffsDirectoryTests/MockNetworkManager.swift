@@ -10,10 +10,7 @@ import Foundation
 
 class MockNetworkManager: Networkble {
     func get<T>(_ baseUrl: String, path: String, type: T.Type, completionHandler: @escaping (Result<[T], APIError>) -> Void) where T : Decodable {
-        
-        
         let bundle = Bundle(for:MockNetworkManager.self)
-        
         guard let url = bundle.url(forResource:path, withExtension:"json"),
               let data = try? Data(contentsOf: url) else {
                   completionHandler(.failure(APIError.serviceNotAvailable))

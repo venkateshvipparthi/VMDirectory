@@ -10,19 +10,11 @@ import XCTest
 class PeopleViewModelTests: XCTestCase {
     
     var peopleViewModel: PeoplesViewModel!
-   
     override func setUpWithError() throws {
-  
         let mockNetworkMaanger = MockNetworkManager()
-        
         peopleViewModel = PeoplesViewModel(networkManager: mockNetworkMaanger)
         
     }
-
-    override func tearDownWithError() throws {
-       
-    }
-
     func testFetchStaff_success() {
             
         peopleViewModel.fetchPeoples(baseUrl: "", path: "people_success_response")
